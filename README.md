@@ -18,6 +18,14 @@ tasks and associating them with their respective owners. I decided to keep the p
 - [ ] ***Error handling***: RObust error handling mechanisms are implemented to handle invalid input, edge cases, and unexpected errors gracefully, providing informative error messages to users
 
 
+### Non-functional Requirement
 
+- [ ] ***CLI Navigation***: Design intuitive command-line navigation to help users navigate through different sections and functionalities of the CLI easily
+- [ ] ***Integration with Eternal Tools***: provide options to integrate with external tools or services such as calendars, email clients to enhance task management capabilities
+- [ ] ***Performance***: The CLI should responde quickly to user inputs and provide smooth task management functionality without significant delays
+- [ ] ***Reliability***: The system should be reliable and stable, ensuring that tasks area accurately created, modified, and deleted without data loss or corruption
+- [ ] ***Scalability***: The system should be scalable to handle a growing number of tasks and users without compromising performance or usability
+- [ ] ***Compatibility***: The CLI tool should be compatible with various operating system (e.g Linux, MacOS, Linux)
+- [ ] ***Maintainability***: The codebase should be well-structured, documented, and modular to facilitate ease of maintenance, debugging, and future enhancements
 
 
