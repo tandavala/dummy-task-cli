@@ -7,7 +7,7 @@ tasks and associating them with their respective owners. I decided to keep the p
 
 ### Funcional Requirement
 
-- [x] ***Task Creation***: Users can create new tasks by providing details such as title, description, due date, priority, and status
+- [ ] ***Task Creation***: Users can create new tasks by providing details such as title, description, due date, priority, and status
 - [ ] ***Task Listing***: Users can list all existing tasks along with their details 
 - [ ] ***Task Modification***: Users can modify existing tasks by updating their details 
 
