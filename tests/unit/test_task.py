@@ -16,4 +16,11 @@ class TestTask:
         assert task.priority == Priority.NORMAL
 
     def test_can_create_task_with_high_priority(self, task_dto):
-        pass
+        title = task_dto.get('title')
+        description = task_dto.get('description')
+
+        task = Task(title, description, priority=Priority.HIGH)
+        assert task.title == title
+        assert task.description == description
+        assert task.due_date.date() == datetime.now().date()
+        assert task.priority == Priority.HIGH
