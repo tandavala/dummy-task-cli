@@ -1,8 +1,10 @@
+from dataclasses import dataclass
 from datetime import datetime
 
 from src.tasks.domain.value_objects.priority import Priority
 
 
+@dataclass
 class Task:
 
     def __init__(

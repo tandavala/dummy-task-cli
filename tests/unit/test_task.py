@@ -24,3 +24,13 @@ class TestTask:
         assert task.description == description
         assert task.due_date.date() == datetime.now().date()
         assert task.priority == Priority.HIGH
+
+    def test_can_create_task_with_low_priority(self, task_dto):
+        title = task_dto.get('title')
+        description = task_dto.get('description')
+
+        task = Task(title, description, priority=Priority.LOW)
+        assert task.title == title
+        assert task.description == description
+        assert task.priority == Priority.LOW
+        assert task.due_date.date() == datetime.now().date()
