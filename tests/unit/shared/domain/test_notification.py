@@ -20,3 +20,16 @@ class TestNotification:
 
             assert err_messages == expected_messages
             assert has_errors == expected_has_errors
+
+    def test_notification_edge_cases(self):
+        test_cases = [
+            ([""], ""),  # empty string error
+            ([" "], " "),  # whitespace string error
+            ([None], ""),  # none as error should be ignored
+        ]
+        for errors, expected_str in test_cases:
+            notification = Notification()
+            for error in errors:
+                notification.add_error(error)
+            actual_str = str(notification)
+            assert actual_str == expected_str
