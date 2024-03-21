@@ -1,4 +1,5 @@
 import pytest
+
 from src.tasks.domain.value_objects.priority import Priority
 
 
