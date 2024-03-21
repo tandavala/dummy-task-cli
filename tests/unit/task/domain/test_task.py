@@ -38,6 +38,10 @@ class TestTask:
     def test_task_title_validation(self):
         with pytest.raises(ValueError, match="^title cannot be empty$") as excinfo:
             Task(title="")
+    
+    def test_task_description_validation(self):
+        with pytest.raises(ValueError, match="^description cannot be longer than 1024$") as excinfo:
+            Task(title="valid title", description="a" * 1025)
 
 
 

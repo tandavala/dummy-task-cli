@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from datetime import datetime
+from typing import Optional
 
 from src.tasks.domain.value_objects.priority import Priority
 from src.shared.domain.entity import Entity
@@ -8,7 +9,7 @@ from src.shared.domain.entity import Entity
 @dataclass
 class Task(Entity):
     title: str
-    description: str = ""
+    description: Optional[str] = ""
     due_date: datetime = datetime.now()
     priority: Priority = Priority.NORMAL
 
