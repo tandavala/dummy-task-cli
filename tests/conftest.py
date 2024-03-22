@@ -1,6 +1,10 @@
 import pytest
 
+from sqlalchemy import create_engine
+from sqlachemy.orm import sessionmaker, clear_mappers
 
 @pytest.fixture
-def task_dto():
-    return {"title": "Task # 1", "description": "Description task # 1"}
+def in_memory_db():
+    engine = create_engine('sqlite:///:memory:')
+
+
