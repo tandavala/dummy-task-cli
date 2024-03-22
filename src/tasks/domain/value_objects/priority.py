@@ -10,6 +10,6 @@ class Priority(Enum):
         NORMAL: The normal priority
     """
 
-    LOW = "Low"
-    HIGH = "High"
-    NORMAL = "Normal"
+    LOW = "LOW"
+    HIGH = "HIGH"
+    NORMAL = "NORMAL"

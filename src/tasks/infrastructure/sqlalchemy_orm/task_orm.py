@@ -1,5 +1,5 @@
 from datetime import datetime
-from sqlalchemy import Table, Column, Integer, String, Date, Enum
+from sqlalchemy import Table, Column, Integer, String, TIMESTAMP, Enum
 from sqlalchemy.orm import registry
 
 from src.tasks.domain.entity.task import Task
@@ -13,9 +13,9 @@ tasks = Table(
     Column("id", Integer, primary_key=True, autoincrement=True),
     Column("title", String(255)),
     Column("description", String),
-    Column("due_date", Date),
+    Column("due_date", TIMESTAMP),
     Column("priority", Enum(Priority)),
-    Column("created_at", Date, default=datetime.now()),
+    Column("created_at", TIMESTAMP, default=datetime.utcnow),
 )
 
 

@@ -18,6 +18,7 @@ def task_dto():
 def in_memory_db():
     engine = create_engine("sqlite:///:memory:")
     mapper_registry.metadata.create_all(engine)
+    return engine
 
 
 @pytest.fixture
